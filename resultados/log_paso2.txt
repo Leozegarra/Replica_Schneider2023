@@ -1,0 +1,29 @@
+
+TABLA 1. Características de los hogares rurales
+                                                        2013  2016/17    Total
+Tamaño del hogar (media)                               4.76     4.98     4.90
+Adultos >18 (media)                                    2.06     2.24     2.18
+Niños <=18 (media)                                     2.71     2.74     2.72
+% del gasto que va a comida (media)                   71.97    70.27    70.89
+Gasto en comida por persona al día, US$ PPP (me...     1.60     1.42     1.47
+Gasto total por persona al día, US$ PPP (mediana)      2.29     1.98     2.10
+Número de hogares                                   1424.00  1693.00  3117.00
+
+TABLA 2. Enero 2013 - julio 2017, 3117 hogares, 83431 hogar-mes
+                                                  Individualizado  Compartido (hogar)
+% de meses con dieta factible                             89.718              60.183
+Costo mediano por persona al día (US$ PPP 2011)            1.786               2.260
+
+TABLA 3. Asequibilidad en el mes de la encuesta (3117 hogares)
+                                                     Individualizado  Compartido (hogar)
+% hogares con dieta factible en el mes de la en...           86.731              56.125
+Costo mediano del hogar al día (US$ PPP 2011)                 7.956               9.244
+Costo / gasto actual en comida (mediana)                      1.107               1.347
+Costo / gasto total (mediana)                                 0.781               0.922
+% sin acceso sin gastar más en comida                        62.214              80.283
+% sin acceso aunque gaste todo su presupuesto                44.416              69.469
+Prima por compartir la olla (mediana, %)                        NaN              32.570
+
+Figura 5, % sin acceso [sin gastar más en comida, aunque gaste todo]:
+ [[62.2 44.4]
+ [80.3 69.5]]

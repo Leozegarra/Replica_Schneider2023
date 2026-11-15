@@ -1,0 +1,9 @@
+                                                  Indicador  Artículo  Réplica (datos autora, Python)  Réplica (nuestras canastas HiGHS)
+                                 Hogares rurales analizados   3117.00                         3117.00                            3117.00
+                % meses con dieta factible, individualizado     89.72                           89.72                                NaN
+                % meses con dieta factible, olla compartida     60.18                           60.18                              60.18
+Costo mediano por persona al día, individualizado (US$ PPP)      1.79                            1.79                                NaN
+Costo mediano por persona al día, olla compartida (US$ PPP)      2.26                            2.26                               2.26
+     % sin acceso sin gastar más en comida, individualizado     62.00                           62.21                                NaN
+     % sin acceso sin gastar más en comida, olla compartida     80.00                           80.28                                NaN
+                            Prima por compartir la olla (%)     33.00                           32.57                                NaN

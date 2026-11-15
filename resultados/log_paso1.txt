@@ -1,0 +1,14 @@
+       0 de 83431 hogar-mes resueltos (0 s)
+   10000 de 83431 hogar-mes resueltos (18 s)
+   20000 de 83431 hogar-mes resueltos (37 s)
+   30000 de 83431 hogar-mes resueltos (56 s)
+   40000 de 83431 hogar-mes resueltos (76 s)
+   50000 de 83431 hogar-mes resueltos (95 s)
+   60000 de 83431 hogar-mes resueltos (114 s)
+   70000 de 83431 hogar-mes resueltos (133 s)
+   80000 de 83431 hogar-mes resueltos (152 s)
+Tiempo total: 157 s para 83431 problemas
+Factibles autora: 59.51%   Factibles réplica: 59.51%
+Coincide la factibilidad en el 100.00% de los casos
+Diferencia relativa de costo: mediana 1.02e-08, máxima 1.04e-05
+Correlación costos autora vs réplica: 1.00000000
