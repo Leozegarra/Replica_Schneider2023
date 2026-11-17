@@ -140,4 +140,4 @@ t = pd.DataFrame({
     "Réplica con grupo 3 de la autora": [media_p(s.iCoNA_HH_pd_ctrl.notna().astype(float) * 100, s.pweight), mediana_p(s.pc_ctrl, s.pweight)],
 }, index=["% de meses con dieta individual factible", "Costo mediano por persona al día (US$ PPP)"]).round(3)
 t.to_csv("resultados/tabla2_individual_replica.csv")
-print("\nTabla 2, columna individual:\n", t)
+print("\nTabla 2, columna individual:\n" + t.to_string())
