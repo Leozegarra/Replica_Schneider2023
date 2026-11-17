@@ -64,14 +64,20 @@ t1 = t1[(t1.reside == 1) & (t1.data_round != 1) & t1.market_no.notna()]
 t1 = t1.merge(comp, on=LLAVES, how="left").merge(ppp_anual, on="year", how="left")
 t1["gasto_comida_pdpc"] = t1.totalexp_food / t1.PPP / 365 / t1.hhsize     # US$ PPP por persona al día
 t1["gasto_total_pdpc"] = t1.totalexpenditure / t1.PPP / 365 / t1.hhsize
+# Adultos y niños: la autora los promedia sobre las PERSONAS (cada persona lleva los totales
+# de su hogar), no sobre los hogares. Por eso salen más altos que el promedio por hogar.
+per = pd.read_csv("datos/personas.csv.gz").merge(comp, on=LLAVES, how="left")
+per = per.merge(t1[LLAVES + ["pweight"]], on=LLAVES, how="inner")
 tabla1 = pd.DataFrame({
     "Tamaño del hogar (media)": por_ronda(t1, media_p, "hhsize"),
-    "Adultos >18 (media)": por_ronda(t1, media_p, "adulto"),
-    "Niños <=18 (media)": por_ronda(t1, media_p, "nino"),
-    "% del gasto que va a comida (media)": [v * 100 for v in por_ronda(t1, media_p, "pctfoodexp")],
+    "Adultos >18 (media por persona)": por_ronda(per, media_p, "adulto"),
+    "Niños <=18 (media por persona)": por_ronda(per, media_p, "nino"),
+    "Proporción del gasto que va a comida (mediana)": por_ronda(t1, mediana_p, "pctfoodexp"),
     "Gasto en comida por persona al día, US$ PPP (mediana)": por_ronda(t1, mediana_p, "gasto_comida_pdpc"),
     "Gasto total por persona al día, US$ PPP (mediana)": por_ronda(t1, mediana_p, "gasto_total_pdpc"),
     "Número de hogares": [(t1.data_round == 2).sum(), (t1.data_round == 3).sum(), len(t1)],
+    "Número de personas (sin bebés <6 meses)": [((per.data_round == r) & (per.age_sex_grp != 1) & (per.daysate_conv != 0)).sum()
+                                               for r in (2, 3)] + [((per.age_sex_grp != 1) & (per.daysate_conv != 0)).sum()],
 }, index=["2013", "2016/17", "Total"]).T.round(2)
 tabla1.to_csv(R + "tabla1.csv")
 print("\nTABLA 1. Características de los hogares rurales\n", tabla1)
