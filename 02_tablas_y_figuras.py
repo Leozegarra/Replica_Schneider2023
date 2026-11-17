@@ -142,7 +142,9 @@ tabla3.to_csv(R + "tabla3.csv")
 print(f"\nTABLA 3. Asequibilidad en el mes de la encuesta ({len(t3)} hogares)\n", tabla3)
 
 # ================================================= FIGURAS 2 y 3: mes a mes
-fig_df = s[s.dateMY < "2017-07-01"].copy()
+# Su código filtra con "dateMY<2017-07", pero en Stata eso es el número 2010 y no una fecha,
+# así que no filtra nada: la figura del paper incluye julio de 2017. Hacemos lo mismo.
+fig_df = s.copy()
 fig_df.loc[fig_df.CoNA_sharing.isna(), "CoNA_solution"] = 0
 mensual = fig_df.groupby("dateMY").apply(lambda d: pd.Series({
     "factible_indiv": media_p(d.iCoNA_solutionallHH * 100, d.pweight),
@@ -156,6 +158,9 @@ AZUL_OSC, AZUL_CLA = "#1f3b73", "#6aa9e0"
 fig, ax = plt.subplots(figsize=(11, 4.2))
 ax.bar(mensual.dateMY, mensual.factible_indiv, width=25, color=AZUL_OSC, label="Dietas individualizadas")
 ax.bar(mensual.dateMY, mensual.factible_comp, width=25, color=AZUL_CLA, label="Olla compartida (hogar)")
+# Líneas de referencia del paper: factibilidad media de cada escenario (Tabla 2)
+ax.axhline(tabla2.iloc[0, 0], color="#333333", ls="--", lw=1)
+ax.axhline(tabla2.iloc[0, 1], color="#333333", ls="-", lw=1)
 ax.set_ylabel("% de hogares con dieta factible"); ax.set_ylim(0, 100)
 ax.set_title("Figura 2 (réplica). Hogares rurales con una dieta nutricionalmente adecuada disponible, 2013-2017")
 ax.legend(loc="lower left", frameon=False); ax.spines[["top", "right"]].set_visible(False)
@@ -163,7 +168,10 @@ fig.tight_layout(); fig.savefig(R + "figura2_factibilidad.png", dpi=200); plt.cl
 
 fig, ax = plt.subplots(figsize=(11, 4.2))
 ax.plot(mensual.dateMY, mensual.costo_indiv, color=AZUL_OSC, lw=2, label="Dietas individualizadas")
-ax.plot(mensual.dateMY, mensual.costo_comp, color=AZUL_CLA, lw=2, label="Olla compartida (hogar)")
+ax.plot(mensual.dateMY, mensual.costo_comp, color=AZUL_CLA, lw=2, ls="--", label="Olla compartida (hogar)")
+# Líneas de referencia del paper: costo mediano de cada escenario (Tabla 2)
+ax.axhline(tabla2.iloc[1, 0], color=AZUL_OSC, ls="-", lw=1)
+ax.axhline(tabla2.iloc[1, 1], color=AZUL_CLA, ls="--", lw=1)
 ax.set_ylabel("Costo mediano por persona al día\n(US$ PPP 2011)")
 ax.set_title("Figura 3 (réplica). Costo de la dieta adecuada mes a mes, 2013-2017")
 ax.legend(loc="upper left", frameon=False); ax.spines[["top", "right"]].set_visible(False)
