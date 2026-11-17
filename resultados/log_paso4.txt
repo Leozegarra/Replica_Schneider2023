@@ -1,0 +1,10 @@
+Diferencia relativa de costo: mediana 1.28e-03, p99 6.61e-01, corr 0.909927
+Hogar-mes: 83431 | factibles autora 87.07%, réplica 89.18%, coincide 97.84%
+Costo del hogar: diferencia mediana 4.70e-03, corr 0.914144
+
+Tabla 2, columna individual:
+                                             Autora (sus costos)  ...  Réplica con grupo 3 de la autora
+% de meses con dieta individual factible                 89.718  ...                            89.687
+Costo mediano por persona al día (US$ PPP)                1.786  ...                             1.777
+
+[2 rows x 3 columns]

@@ -1,9 +1,25 @@
-                                                  Indicador  Artículo  Réplica (datos autora, Python)  Réplica (nuestras canastas HiGHS)
-                                 Hogares rurales analizados   3117.00                         3117.00                            3117.00
-                % meses con dieta factible, individualizado     89.72                           89.72                                NaN
-                % meses con dieta factible, olla compartida     60.18                           60.18                              60.18
-Costo mediano por persona al día, individualizado (US$ PPP)      1.79                            1.79                                NaN
-Costo mediano por persona al día, olla compartida (US$ PPP)      2.26                            2.26                               2.26
-     % sin acceso sin gastar más en comida, individualizado     62.00                           62.21                                NaN
-     % sin acceso sin gastar más en comida, olla compartida     80.00                           80.28                                NaN
-                            Prima por compartir la olla (%)     33.00                           32.57                                NaN
+Sección                                              Indicador  Artículo  Réplica (datos de la autora)  Réplica (nuestro solver)
+Tabla 1                                        Hogares rurales   3117.00                       3117.00                       NaN
+Tabla 1                                               Personas  14902.00                      14902.00                       NaN
+Tabla 1                                       Tamaño del hogar      4.90                          4.90                       NaN
+Tabla 1                                      Adultos por hogar      2.44                          2.43                       NaN
+Tabla 1                                        Niños por hogar      3.51                          3.51                       NaN
+Tabla 1               Gasto en comida por persona al día (US$)      1.47                          1.47                       NaN
+Tabla 1                         Proporción del gasto en comida      0.74                          0.74                       NaN
+Tabla 2                 % meses con dieta factible, individual     89.70                         89.72                     91.37
+Tabla 2                 % meses con dieta factible, compartida     60.20                         60.18                     60.18
+Tabla 2             Costo por persona al día, individual (US$)      1.79                          1.79                      1.71
+Tabla 2             Costo por persona al día, compartida (US$)      2.26                          2.26                      2.26
+Tabla 2     Brecha estacional de factibilidad, individual (pp)      7.40                          7.44                       NaN
+Tabla 2     Brecha estacional de factibilidad, compartida (pp)     19.20                         19.22                       NaN
+Tabla 2             Brecha estacional de costo, individual (%)     13.80                         13.82                       NaN
+Tabla 2             Brecha estacional de costo, compartida (%)     10.10                         10.12                       NaN
+Tabla 3 % con dieta factible en el mes de encuesta, individual     86.73                         86.73                       NaN
+Tabla 3 % con dieta factible en el mes de encuesta, compartida     56.13                         56.12                       NaN
+Tabla 3                    Costo / gasto en comida, individual      1.11                          1.11                       NaN
+Tabla 3                    Costo / gasto en comida, compartida      1.35                          1.35                       NaN
+Tabla 3                        Costo / gasto total, individual      0.78                          0.78                       NaN
+Tabla 3                        Costo / gasto total, compartida      0.92                          0.92                       NaN
+  Texto      % sin acceso sin gastar más en comida, individual     62.00                         62.21                       NaN
+  Texto      % sin acceso sin gastar más en comida, compartida     80.00                         80.28                       NaN
+Tabla 3                   Sobrecosto por compartir la olla (%)     33.00                         32.57                       NaN
